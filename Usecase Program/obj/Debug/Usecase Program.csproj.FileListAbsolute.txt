@@ -31,3 +31,6 @@ E:\Downloads\Dropbox\School documenten\Fontys\Semester 3\1.SE21\Usecase\Usecase\
 E:\Downloads\Dropbox\School documenten\Fontys\Semester 3\1.SE21\Usecase\Usecase\Usecase\Usecase Program\obj\Debug\Usecase_Program.Properties.Resources.resources
 E:\Downloads\Dropbox\School documenten\Fontys\Semester 3\1.SE21\Usecase\Usecase\Usecase\Usecase Program\obj\Debug\Usecase_Program.usecase_inhoud.resources
 E:\Downloads\Dropbox\School documenten\Fontys\Semester 3\1.SE21\Usecase\Usecase\Usecase\Usecase Program\obj\Debug\Usecase Program.csproj.GenerateResource.Cache
+D:\Gitrepo\UsecaseHelper\Usecase Program\bin\Debug\Usecase Program.exe.config
+D:\Gitrepo\UsecaseHelper\Usecase Program\obj\Debug\Usecase Program.exe
+D:\Gitrepo\UsecaseHelper\Usecase Program\obj\Debug\Usecase Program.pdb
