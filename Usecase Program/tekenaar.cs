@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Usecase_Program
 {
-    class tekenaar
+    class Tekenaar
     {
     }
 }

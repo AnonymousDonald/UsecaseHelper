@@ -55,7 +55,7 @@
     <Compile Include="Actor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="tekenaar.cs" />
+    <Compile Include="Tekenaar.cs" />
     <Compile Include="Usecase.cs" />
     <Compile Include="usecase_inhoud.cs">
       <SubType>Form</SubType>

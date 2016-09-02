@@ -14,6 +14,9 @@ namespace Usecase_Program
         public int x;
         public int y;
 
+        //propperties
+        public string Name { get; private set; }
+
         // Private variables
         private Rectangle _head;
         private Pen _pen;
@@ -23,6 +26,7 @@ namespace Usecase_Program
         private Point _armsPoint2;
         private Point _legPoint1;
         private Point _legPoint2;
+        private Point _labelPosition;
 
         // Static variables
         private static Color _penColor = Color.Black;
@@ -35,11 +39,14 @@ namespace Usecase_Program
         private static int _armHeight = 20;
         private static int _legWidth = 10;
         private static int _legHeight = 40;
+        
 
-        public Actor(int x, int y)
+        public Actor(int x, int y, string name)
         {
             this.x = x;
             this.y = y;
+
+            Name = name;
 
             this._pen = new Pen(_penColor, _penWidth);
 
@@ -50,6 +57,7 @@ namespace Usecase_Program
             this._armsPoint2 = new Point(this._armsPoint1.X + (_armLength*2), this._armsPoint1.Y);
             this._legPoint1 = new Point(this._bodyPoint2.X - _legWidth, this._bodyPoint2.Y + _legHeight);
             this._legPoint2 = new Point(this._bodyPoint2.X + _legWidth, this._bodyPoint2.Y + _legHeight);
+
         }
 
         public void Paint(object sender, PaintEventArgs e)
@@ -59,6 +67,9 @@ namespace Usecase_Program
             e.Graphics.DrawLine(this._pen, this._armsPoint1, this._armsPoint2);
             e.Graphics.DrawLine(this._pen, this._bodyPoint2, this._legPoint1);
             e.Graphics.DrawLine(this._pen, this._bodyPoint2, this._legPoint2);
+            e.Graphics.DrawString(Name, _pen, _labelPosition);
+
+
         }
     }
 }

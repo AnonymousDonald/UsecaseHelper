@@ -36,7 +36,8 @@ namespace Usecase_Program
             {
                 if (rbActoren.Checked && rbCreate.Checked)
                 {
-                    Actor n = new Actor(me.X, me.Y);
+                    string name = tbName.Text;
+                    Actor n = new Actor(me.X, me.Y, name);
                     _actorList.Add(n);
                     Canvas.Refresh();
                 }
