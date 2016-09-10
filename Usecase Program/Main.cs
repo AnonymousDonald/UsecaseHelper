@@ -13,11 +13,13 @@ namespace Usecase_Program
     public partial class Main : Form
     {
         private List<Actor> _actorList;
+        private List<Usecase> _usecaseList;
 
         public Main()
         {
             InitializeComponent();
             _actorList = new List<Actor>();
+            _usecaseList = new List<Usecase>();
         }
 
         private void Canvas_Paint(object sender, PaintEventArgs e)
@@ -39,6 +41,13 @@ namespace Usecase_Program
                     string name = tbName.Text;
                     Actor n = new Actor(me.X, me.Y, name);
                     _actorList.Add(n);
+                    Canvas.Refresh();
+                }
+                if (rbCreate.Checked && rbUsecase.Checked)
+                {
+                    string name = tbName.Text;
+                    Usecase u = new Usecase(me.X, me.Y, name);
+                    _usecaseList.Add(u);
                     Canvas.Refresh();
                 }
             }

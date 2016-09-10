@@ -70,15 +70,13 @@ namespace Usecase_Program
 
         public void Paint(object sender, PaintEventArgs e)
         {
-            
             e.Graphics.DrawEllipse(this._pen, this._head);
             e.Graphics.DrawLine(this._pen, this._bodyPoint1, this._bodyPoint2);
             e.Graphics.DrawLine(this._pen, this._armsPoint1, this._armsPoint2);
             e.Graphics.DrawLine(this._pen, this._bodyPoint2, this._legPoint1);
             e.Graphics.DrawLine(this._pen, this._bodyPoint2, this._legPoint2);
             e.Graphics.DrawString(Name,drawFont,this._brush,x,y +105);
-
-
         }
+
     }
 }

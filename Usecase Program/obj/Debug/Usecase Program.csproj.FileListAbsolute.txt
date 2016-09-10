@@ -40,3 +40,4 @@ D:\Gitrepo\UsecaseHelper\Usecase Program\obj\Debug\Usecase_Program.usecase_inhou
 D:\Gitrepo\UsecaseHelper\Usecase Program\obj\Debug\Usecase Program.csproj.GenerateResource.Cache
 D:\Gitrepo\UsecaseHelper\Usecase Program\bin\Debug\Usecase Program.exe
 D:\Gitrepo\UsecaseHelper\Usecase Program\bin\Debug\Usecase Program.pdb
+D:\Gitrepo\UsecaseHelper\Usecase Program\obj\Debug\Usecase Program.csprojResolveAssemblyReference.cache
