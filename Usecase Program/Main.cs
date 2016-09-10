@@ -61,9 +61,14 @@ namespace Usecase_Program
                         n.ActorSelected(me);
                         if (n.selected)
                         {
-                            n.RedrawActor(sender, me);
+                            n.GiveThisSomeCoolAsNiggaCollaMang(Color.Red);
+                        }
+                        else
+                        {
+                            n.GiveThisSomeCoolAsNiggaCollaMang(Color.Black);
                         }
                     }
+                    Canvas.Refresh();
                 }
             }
         }

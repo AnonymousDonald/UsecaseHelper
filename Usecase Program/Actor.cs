@@ -107,24 +107,14 @@ namespace Usecase_Program
             }
 
         }
+
         /// <summary>
-        /// redrawing actor to indicate this actor is new selected
+        /// NIGGA DIS DA BEST FUCKKING MATTER FAKIN FUCNTION YA DAWG ITS LIKE FUCK DIS SHIT SO REAL LIKE DAT TIEM KEYSLALANA WAS LIKE DAM DOWG WE GON FUK BU DEN SHE LIKE STEP ON DEM JS AND I WAS LIKE FUCK BITCH U DON STEP ON DEM JS BUT DEN SHE MADE WORSE BECAUS SE ALSO STOLE MAH FUKIN TIMS, FUCKN BITCHES ALWASY SSTEAL MAH TIMS FUCK
         /// </summary>
-        /// <param name="sender"></param>
         /// <param name="e"></param>
-        public void RedrawActor(object sender, PaintEventArgs e)
+        public void GiveThisSomeCoolAsNiggaCollaMang(Color mahnignog)
         {
-            SolidBrush tb = new SolidBrush(Color.Red);
-            Pen tp = new Pen(Color.Red, 1);
-            e.Graphics.DrawEllipse(tp, this._head);
-            e.Graphics.DrawLine(tp, this._bodyPoint1, this._bodyPoint2);
-            e.Graphics.DrawLine(tp, this._armsPoint1, this._armsPoint2);
-            e.Graphics.DrawLine(tp, this._bodyPoint2, this._legPoint1);
-            e.Graphics.DrawLine(tp, this._bodyPoint2, this._legPoint2);
-            e.Graphics.DrawString(Name, drawFont, tb, x, y + 105);
-            tb.Dispose();
-            tp.Dispose();
-            selected = false;
+            this._pen = new Pen(mahnignog, _penWidth);
         }
     }
 }
