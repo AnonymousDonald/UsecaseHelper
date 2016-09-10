@@ -13,7 +13,9 @@ namespace Usecase_Program
         // Public variables
         public int x;
         public int y;
-
+        public int endx;
+        public int endy;
+        public bool selected = false;
         //propperties
         public string Name { get; private set; }
 
@@ -51,6 +53,8 @@ namespace Usecase_Program
         {
             this.x = x;
             this.y = y;
+            this.endx = x + 26;
+            this.endy = y + 100;
 
             Name = name;
 
@@ -68,17 +72,49 @@ namespace Usecase_Program
 
         }
 
+        /// <summary>
+        /// draw actor on canvas
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void Paint(object sender, PaintEventArgs e)
         {
-            
             e.Graphics.DrawEllipse(this._pen, this._head);
             e.Graphics.DrawLine(this._pen, this._bodyPoint1, this._bodyPoint2);
             e.Graphics.DrawLine(this._pen, this._armsPoint1, this._armsPoint2);
             e.Graphics.DrawLine(this._pen, this._bodyPoint2, this._legPoint1);
             e.Graphics.DrawLine(this._pen, this._bodyPoint2, this._legPoint2);
             e.Graphics.DrawString(Name,drawFont,this._brush,x,y +105);
+        }
 
+        /// <summary>
+        /// fucntion to check if mouse is clicking on object
+        /// </summary>
+        /// <param name="e"></param>
+        public void ActorSelected(MouseEventArgs e)
+        {
+            if(e.X == this.x ||
+                e.X >= this.x &&
+                e.Y == this.y ||
+                e.Y >= this.y &&
+                e.X <= this.endx ||
+                e.X == this.endx &&
+                e.Y <= this.endy ||
+                e.Y == this.endy)
+            {
+                selected = true;
 
+            }
+
+        }
+
+        /// <summary>
+        /// NIGGA DIS DA BEST FUCKKING MATTER FAKIN FUCNTION YA DAWG ITS LIKE FUCK DIS SHIT SO REAL LIKE DAT TIEM KEYSLALANA WAS LIKE DAM DOWG WE GON FUK BU DEN SHE LIKE STEP ON DEM JS AND I WAS LIKE FUCK BITCH U DON STEP ON DEM JS BUT DEN SHE MADE WORSE BECAUS SE ALSO STOLE MAH FUKIN TIMS, FUCKN BITCHES ALWASY SSTEAL MAH TIMS FUCK
+        /// </summary>
+        /// <param name="e"></param>
+        public void GiveThisSomeCoolAsNiggaCollaMang(Color mahnignog)
+        {
+            this._pen = new Pen(mahnignog, _penWidth);
         }
     }
 }
