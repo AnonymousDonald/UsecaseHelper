@@ -28,6 +28,10 @@ namespace Usecase_Program
             {
                 actor.Paint(sender, e);
             }
+            foreach(Usecase usecase in _usecaseList)
+            {
+                usecase.PaintElipse(sender, e);
+            }
         }
 
         private void Canvas_Click(object sender, EventArgs e)
@@ -49,6 +53,17 @@ namespace Usecase_Program
                     Usecase u = new Usecase(me.X, me.Y, name);
                     _usecaseList.Add(u);
                     Canvas.Refresh();
+                }
+                if (rbSelect.Checked)
+                {
+                    foreach(Actor n in _actorList)
+                    {
+                        n.ActorSelected(me);
+                        if (n.selected)
+                        {
+                            n.RedrawActor(sender, me);
+                        }
+                    }
                 }
             }
         }

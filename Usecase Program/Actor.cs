@@ -13,7 +13,9 @@ namespace Usecase_Program
         // Public variables
         public int x;
         public int y;
-
+        public int endx;
+        public int endy;
+        public bool selected = false;
         //propperties
         public string Name { get; private set; }
 
@@ -51,6 +53,8 @@ namespace Usecase_Program
         {
             this.x = x;
             this.y = y;
+            this.endx = x + 26;
+            this.endy = y + 100;
 
             Name = name;
 
@@ -78,5 +82,35 @@ namespace Usecase_Program
             e.Graphics.DrawString(Name,drawFont,this._brush,x,y +105);
         }
 
+        public void ActorSelected(MouseEventArgs e)
+        {
+            if(e.X == this.x ||
+                e.X >= this.x &&
+                e.Y == this.y ||
+                e.Y >= this.y &&
+                e.X <= this.endx ||
+                e.X == this.endx &&
+                e.Y <= this.endy ||
+                e.Y == this.endy)
+            {
+                selected = true;
+
+            }
+
+        }
+        public void RedrawActor(object sender, PaintEventArgs e)
+        {
+            SolidBrush tb = new SolidBrush(Color.Red);
+            Pen tp = new Pen(Color.Red, 1);
+            e.Graphics.DrawEllipse(tp, this._head);
+            e.Graphics.DrawLine(tp, this._bodyPoint1, this._bodyPoint2);
+            e.Graphics.DrawLine(tp, this._armsPoint1, this._armsPoint2);
+            e.Graphics.DrawLine(tp, this._bodyPoint2, this._legPoint1);
+            e.Graphics.DrawLine(tp, this._bodyPoint2, this._legPoint2);
+            e.Graphics.DrawString(Name, drawFont, tb, x, y + 105);
+            tb.Dispose();
+            tp.Dispose();
+            selected = false;
+        }
     }
 }
