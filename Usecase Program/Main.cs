@@ -40,21 +40,21 @@ namespace Usecase_Program
             
             if (me != null)
             {
-                if (rbActoren.Checked && rbCreate.Checked)
+                if (rbActoren.Checked && rbCreate.Checked) // create actor
                 {
                     string name = tbName.Text;
                     Actor n = new Actor(me.X, me.Y, name);
                     _actorList.Add(n);
                     Canvas.Refresh();
                 }
-                if (rbCreate.Checked && rbUsecase.Checked)
+                if (rbCreate.Checked && rbUsecase.Checked) // create usecase
                 {
                     string name = tbName.Text;
                     Usecase u = new Usecase(me.X, me.Y, name);
                     _usecaseList.Add(u);
                     Canvas.Refresh();
                 }
-                if (rbSelect.Checked)
+                if (rbSelect.Checked) // selected
                 {
                     foreach(Actor n in _actorList)
                     {

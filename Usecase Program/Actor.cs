@@ -72,6 +72,11 @@ namespace Usecase_Program
 
         }
 
+        /// <summary>
+        /// draw actor on canvas
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void Paint(object sender, PaintEventArgs e)
         {
             e.Graphics.DrawEllipse(this._pen, this._head);
@@ -82,6 +87,10 @@ namespace Usecase_Program
             e.Graphics.DrawString(Name,drawFont,this._brush,x,y +105);
         }
 
+        /// <summary>
+        /// fucntion to check if mouse is clicking on object
+        /// </summary>
+        /// <param name="e"></param>
         public void ActorSelected(MouseEventArgs e)
         {
             if(e.X == this.x ||
@@ -98,6 +107,11 @@ namespace Usecase_Program
             }
 
         }
+        /// <summary>
+        /// redrawing actor to indicate this actor is new selected
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void RedrawActor(object sender, PaintEventArgs e)
         {
             SolidBrush tb = new SolidBrush(Color.Red);
